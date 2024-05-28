@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Hiring_Page">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+    <LinearLayout
+
+        android:layout_width="match_parent"
+
+        android:layout_height="120dp">
+        <TextView
+            android:padding="30dp"
+            android:background="@color/black"
+            android:textAlignment="center"
+            android:id="@+id/textView"
+            android:textColor="#C738BD"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="40sp"
+            android:text="Work SmarteR" />
+    </LinearLayout>
+
+<LinearLayout
+    android:background="#E49BFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+<LinearLayout
+    android:layout_weight="1"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name         " />
+
+    <EditText
+        android:id="@+id/etname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="text"
+        android:text="Fahad" />
+</LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="85dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone Number" />
+
+            <EditText
+                android:id="@+id/etnum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="text"
+                android:text="030012344533" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/etcity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:inputType="text"
+                android:text="Karachi" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="Address" />
+
+            <EditText
+                android:id="@+id/etadd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="DHA" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EmploymentType" />
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnhire"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hire" />
+    <Button
+        android:id="@+id/btncreatejob"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Post Jobs" />
+    <Button
+        android:id="@+id/btnlogouthiring"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout" />
+
+</LinearLayout>
+</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

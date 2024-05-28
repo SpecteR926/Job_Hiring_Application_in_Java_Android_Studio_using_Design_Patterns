@@ -1,0 +1,165 @@
+@startuml
+
+/' diagram meta data start
+config=StructureConfiguration;
+{
+  "projectClassification": {
+    "searchMode": "OpenProject", // OpenProject, AllProjects
+    "includedProjects": "",
+    "pathEndKeywords": "*.impl",
+    "isClientPath": "",
+    "isClientName": "",
+    "isTestPath": "",
+    "isTestName": "",
+    "isMappingPath": "",
+    "isMappingName": "",
+    "isDataAccessPath": "",
+    "isDataAccessName": "",
+    "isDataStructurePath": "",
+    "isDataStructureName": "",
+    "isInterfaceStructuresPath": "",
+    "isInterfaceStructuresName": "",
+    "isEntryPointPath": "",
+    "isEntryPointName": "",
+    "treatFinalFieldsAsMandatory": false
+  },
+  "graphRestriction": {
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "removeByInheritance": "", // inheritance/annotation based filtering is done in a second step
+    "removeByAnnotation": "",
+    "removeByClassPackage": "", // cleanup the graph after inheritance/annotation based filtering is done
+    "removeByClassName": "",
+    "cutMappings": false,
+    "cutEnum": true,
+    "cutTests": true,
+    "cutClient": true,
+    "cutDataAccess": false,
+    "cutInterfaceStructures": false,
+    "cutDataStructures": false,
+    "cutGetterAndSetter": true,
+    "cutConstructors": true
+  },
+  "graphTraversal": {
+    "forwardDepth": 6,
+    "backwardDepth": 6,
+    "classPackageExcludeFilter": "",
+    "classPackageIncludeFilter": "",
+    "classNameExcludeFilter": "",
+    "classNameIncludeFilter": "",
+    "methodNameExcludeFilter": "",
+    "methodNameIncludeFilter": "",
+    "hideMappings": false,
+    "hideDataStructures": false,
+    "hidePrivateMethods": true,
+    "hideInterfaceCalls": true, // indirection: implementation -> interface (is hidden) -> implementation
+    "onlyShowApplicationEntryPoints": false, // root node is included
+    "useMethodCallsForStructureDiagram": "ForwardOnly" // ForwardOnly, BothDirections, No
+  },
+  "details": {
+    "aggregation": "GroupByClass", // ByClass, GroupByClass, None
+    "showClassGenericTypes": true,
+    "showMethods": true,
+    "showMethodParameterNames": true,
+    "showMethodParameterTypes": true,
+    "showMethodReturnType": true,
+    "showPackageLevels": 2,
+    "showDetailedClassStructure": true
+  },
+  "rootClass": "com.example.dp_project.Stragety_Pattern.Strategy_Interface",
+  "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
+}
+diagram meta data end '/
+
+
+
+digraph g {
+    rankdir="TB"
+    splines=polyline
+    
+
+'nodes 
+subgraph cluster_1322970774 { 
+   	label=example
+	labeljust=l
+	fillcolor="#ececec"
+	style=filled
+   
+   subgraph cluster_387815786 { 
+   	label=dp_project
+	labeljust=l
+	fillcolor="#d8d8d8"
+	style=filled
+   
+   Full_time726857317[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Full_time</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ add_allowances(a1: int): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Part_time726857317[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Part_time</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ add_allowances(a1: int): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Strategy726857317[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Strategy</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >#   Address: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   city: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   d1: db_class [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   name: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   ph: String [0..1]</TD></TR>
+<TR><TD ALIGN="LEFT" >#   salary: int [1]</TD></TR>
+<TR><TD ALIGN="LEFT" >-   strat: Strategy_Interface [0..1]</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ getallowances(a1: int)</TD></TR>
+<TR><TD ALIGN="LEFT" >+ insertdata()</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Strategy_Interface726857317[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(I)Strategy_Interface</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ add_allowances(a1: int): int</TD></TR>
+<TR><TD ALIGN="LEFT" >+ getsal(): int</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#F1E5FD"
+];
+} 
+} 
+
+'edges    
+Strategy726857317 -> Strategy_Interface726857317[label="strat
+[0..1]"];
+Strategy_Interface726857317 -> Full_time726857317[arrowhead=none, arrowtail=empty, dir=both];
+Strategy_Interface726857317 -> Part_time726857317[arrowhead=none, arrowtail=empty, dir=both];
+    
+}
+@enduml
